@@ -3,6 +3,4 @@ public class Main {
         UberSimulation simulation = new UberSimulation();
         simulation.play();
     }
-
-    // possibility: weather app
 }
