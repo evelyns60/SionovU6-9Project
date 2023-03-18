@@ -31,6 +31,7 @@ public class Person {
 
     public void printInfo() {
         System.out.println("Name: " + name);
+        System.out.println("Current Account Balance: " + accountBalance);
         System.out.println("Total Uber Rides: " + numRides);
     }
 }
