@@ -4,7 +4,10 @@ public class UberSimulation {
     private Passenger passenger;
     private Driver driver;
     private Car car;
+    private Bill bill;
     private final String[][] carTypes = {{"Toyota Camry", "Nissan Altima", "Honda Accord", "Lincoln Towncar"},{"Toyota Highlander", "Nissan Pathfinder", "Dodge Caravan", "Toyota Sienna"}};
+    // make this a car arraylist
+
     private Scanner scan;
 
     public UberSimulation() {
@@ -32,7 +35,11 @@ public class UberSimulation {
             scan.nextLine();
         }
 
+        System.out.println("Thank you for riding with us!");
+        System.out.println("Have an uber-licious day!");
+
     }
+
 
     private void printIntroduction() {
         System.out.println("Welcome to the Official Uber App!");
@@ -40,7 +47,7 @@ public class UberSimulation {
         String name = scan.nextLine();
 
         System.out.print("Great, we'd also like to know your current account balance: ");
-        int accountBalance = scan.nextInt();
+        double accountBalance = scan.nextDouble();
         scan.nextLine();
 
         passenger = new Passenger(name, accountBalance);
@@ -53,6 +60,28 @@ public class UberSimulation {
         System.out.println("2. Check Your Uber Account Info");
         System.out.println("3. Check Your Purchase History");
         System.out.println("4. Quit");
+    }
+
+    private void orderRide() {
+        System.out.print("How many miles is it to and from your location? ");
+        double miles = scan.nextDouble();
+        scan.nextLine();
+
+        System.out.print("How many people will be in this car(including you)? ");
+        int capacity = scan.nextInt();
+        scan.nextLine();
+
+        int random = (int) (Math.random() * carTypes[0].length);
+        if (capacity == 4) {
+            car = carTypes[0][random];
+        } else {
+            car = carTypes[1][random];
+        }
+        //set car to a random value from the car 2d array; the row index should depend on the size of the car
+
+        
+
+
     }
 
 }

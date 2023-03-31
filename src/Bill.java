@@ -3,21 +3,15 @@ public class Bill {
     private Passenger passenger;
     private Driver driver;
     private double distance;
-    private boolean isLarge;
     private final double RIDE_FEE = 1.00;
     private final double TAX = 0.0875;
     private double tip;
 
-    public Bill(double distance, Car car, double tip, Passenger passenger, Driver driver) {
+    public Bill(double distance, double tip, Passenger passenger, Driver driver) {
         this.distance = distance;
         this.tip = tip;
         this.passenger = passenger;
         this.driver = driver;
-        if (car.getCapacity() == 6) {
-            isLarge = true;
-        } else {
-            isLarge = false;
-        }
     }
 
     public double getDistance() {
@@ -36,9 +30,9 @@ public class Bill {
         return driver;
     }
 
-    public double calculateTotalPrice() {
+    public double calculateTotalPrice(Car car) {
         double total = 0;
-        if (isLarge) {
+        if (car.getCapacity() == 6) {
             total += distance * 2.00;
         } else {
             total += distance * 1.40;
@@ -50,9 +44,10 @@ public class Bill {
         return total;
     }
 
-    public void printInfo() {
-        System.out.println("Name: " + passenger.getName());
-        System.out.println();
+    public String toString() {
+        String str = "Name: " + passenger.getName();
+        str += "";
+        return str;
     }
 
 }
