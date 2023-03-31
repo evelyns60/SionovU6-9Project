@@ -72,14 +72,17 @@ public class UberSimulation {
         scan.nextLine();
 
         int random = (int) (Math.random() * carTypes[0].length);
+
+       /*
         if (capacity == 4) {
             car = carTypes[0][random];
         } else {
             car = carTypes[1][random];
         }
+
+        */
         //set car to a random value from the car 2d array; the row index should depend on the size of the car
 
-        
 
 
     }
