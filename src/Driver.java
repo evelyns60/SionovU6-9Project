@@ -1,15 +1,18 @@
 import java.util.ArrayList;
 
 public class Driver extends Person{
-
-    private ArrayList<Double> ratingList;
+    private ArrayList<Integer> ratingList;
 
     public Driver(String name, double accountBalance) {
         super(name, accountBalance);
         ratingList = new ArrayList<>();
     }
 
-    public void addRating(double rating) {
+    public ArrayList<Integer> getRatingList() {
+        return ratingList;
+    }
+
+    public void addRating(int rating) {
         ratingList.add(rating);
     }
 
@@ -23,9 +26,14 @@ public class Driver extends Person{
 
     @Override
     public void printInfo() {
-        System.out.println("Driver Info: \n");
+        System.out.println("Driver Info:");
         super.printInfo();
-        System.out.println("Average Rating: " + averageRating());
+        System.out.print("Average Rating: " );
+        if (ratingList.size() == 0) {
+            System.out.println("N/A");
+        } else {
+            System.out.println(averageRating());
+        }
     }
 
 
