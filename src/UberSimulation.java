@@ -33,10 +33,6 @@ public class UberSimulation {
         return PURPLE;
     }
 
-    public static String getBrown() {
-        return BROWN;
-    }
-
     public static String getCyan() {
         return CYAN;
     }
@@ -64,7 +60,6 @@ public class UberSimulation {
             System.out.print("Choose an option: ");
             option = scan.nextInt();
             scan.nextLine();
-
         }
 
         if (isBroke) {
@@ -78,7 +73,6 @@ public class UberSimulation {
             System.out.println("Thank you for riding with us!");
             System.out.println("Have an uber-licious day!");
         }
-
     }
 
     private void printIntroduction() {
