@@ -89,11 +89,13 @@ public class UberSimulation {
     }
 
     private void printMenu() {
-        System.out.println(BROWN + "\nMain Menu: \n");
+        System.out.println(BROWN + "* - * - * - * - * - * - * - * - * - * - * - *");
+        System.out.println("Main Menu: \n");
         System.out.println("1. Order a Ride");
         System.out.println("2. Check Your Uber Account Info");
         System.out.println("3. Check the Uber App Stats");
-        System.out.println("4. Quit" + WHITE);
+        System.out.println("4. Quit");
+        System.out.println("* - * - * - * - * - * - * - * - * - * - * - *" + WHITE);
     }
 
     private void printAppStats() {
@@ -115,11 +117,17 @@ public class UberSimulation {
 
         currentCar = setCurrentCar(currentCar);
 
+
+        System.out.println("Loading..");
+        System.out.println("...");
+        System.out.println("......");
+        System.out.println(".........");
+        System.out.println("COMPLETE!");
         System.out.println("\nYour Car Has Arrived! \n\nDetails: ");
         System.out.println(PURPLE + currentCar + WHITE);
         System.out.println();
         currentCar.getDriver().printInfo();
-        System.out.print("Enter any key when your ride is complete. " );
+        System.out.print("\nEnter any key when your ride is complete. " );
         String next = scan.nextLine();
         System.out.print("What " + PURPLE + "percentage tip " + WHITE + "will you be giving to your driver? ");
         int tipPercentage = scan.nextInt();
