@@ -137,7 +137,7 @@ public class UberSimulation {
         System.out.println();
         System.out.println(currentBill);
 
-        System.out.print("Wait! Before you go, how would you rate your driver on a scale of " + RED + "1-5" + WHITE + "?");
+        System.out.print("Wait! Before you go, how would you rate your driver on a scale of " + RED + "1-5" + WHITE + "? ");
         int rating = scan.nextInt();
         scan.nextLine();
         currentCar.getDriver().addRating(rating);

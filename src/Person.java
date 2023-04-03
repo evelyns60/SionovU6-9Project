@@ -39,7 +39,7 @@ public class Person {
 
     public void printInfo() {
         System.out.println("Name: " + name);
-        System.out.println("Current Account Balance: " + dollarFormat.format(accountBalance));
+        System.out.println("Current Account Balance: $" + dollarFormat.format(accountBalance));
         System.out.println("Total Uber Rides: " + numRides);
     }
 }
